@@ -1,6 +1,6 @@
 # Exercise 3
 
-## In this exercise, I used 10 linux command
+## In this exercise, I used 10 linux commands
 1. `whoami` to check which user I logged in as.  
     ![whoami](1.png)
 
