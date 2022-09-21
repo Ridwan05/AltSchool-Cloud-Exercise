@@ -6,5 +6,5 @@
 
    ![/etc/apt/sources.list](sources_list.png)  
 - `sudo apt -y install php7.4` to install PHP 7.4
-- `php -v` to check the php version
+- `php -v` to check the php version  
    ![php -v](php_v.png)
