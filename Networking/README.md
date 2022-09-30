@@ -1,4 +1,4 @@
-# In this exercise, I find the Network IP, number of hosts, range of IP addresses and broadcast IP from the subnet ~193.16.20.35/29~
+# In this exercise, I find the Network IP, number of hosts, range of IP addresses and broadcast IP from the subnet _193.16.20.35/29_
 
 - Address: 193.16.20.35 ==> 1 1 0 0 0 0 0 1 . 0 0 0 1 0 0 0 0 . 0 0 0 1 0 1 0 0 . 0 0 1 0 0 0 1 1
 
