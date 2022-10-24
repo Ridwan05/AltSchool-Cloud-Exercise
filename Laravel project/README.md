@@ -50,22 +50,21 @@
 - enabled the new site with `sudo a2ensite Laravel.conf`
 - installed laravel dependencies with `composer install`
 - created a database  
-    `mysql -u root -p`
+    Login as root user `mysql -u root -p`  
+    create database with `create database ridwan;`
 - copy .env.example to .env with `cp .env.example .env`  
      edit with nano .env file to:  
-          ```
-
-          DB_CONNECTION=mysql
+     
+       ```DB_CONNECTION=mysql
           DB_HOST=localhost
           DB_PORT=5432
           DB_DATABASE=ridwan
           DB_USERNAME=root
-          DB_PASSWORD=Khadijah74
-
-          ```
+          DB_PASSWORD=Khadijah74```
 
 - give laravel permision by running the following commands:  
       ```
+      
       sudo chown -R :www-data /var/www/html/Laravel
 
       sudo chmod -R 775 /var/www/html/Laravel
