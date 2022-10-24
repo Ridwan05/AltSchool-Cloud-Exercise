@@ -88,8 +88,8 @@
       ```
 
 - restart apatche with `sudo systemctl restart apache2`
-- configured a domain (altschool.demo.com) to point at the remote server IP  
-     added `68.183.114.0   altschool.demo.com` to my local system hostfile  
+- configured a domain (altschool.demo.com) to point at the remote server IP whenever I visit the domain in my host browser  
+     done this by adding `68.183.114.0   altschool.demo.com` to my local system hostfile  
 
    ![Laravel Landing Page](laravel.png)  
 
