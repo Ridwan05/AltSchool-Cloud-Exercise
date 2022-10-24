@@ -1,6 +1,6 @@
 # Laravel Realworld Project
 
-## In this exercise, I cloned a Laravel project and deployed it to Debian 11, running on a virtual machine on Digiatl Ocean.
+## In this exercise, I cloned a Laravel project and deployed it to Debian 11, running on a virtual machine on Digital Ocean.
 
 - Created Debian 11 droplet with ssh access, on DigitalOcean
        `ssh root@ip...`  
