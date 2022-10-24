@@ -54,13 +54,16 @@
     create database with `create database ridwan;`
 - copy .env.example to .env with `cp .env.example .env`  
      edit with nano .env file to:  
-     
-       ```DB_CONNECTION=mysql
+
+       ```
+          DB_CONNECTION=mysql
           DB_HOST=localhost
           DB_PORT=5432
           DB_DATABASE=ridwan
           DB_USERNAME=root
-          DB_PASSWORD=Khadijah74```
+          DB_PASSWORD=Khadijah74
+
+       ```
 
 - give laravel permision by running the following commands:  
       ```
@@ -77,9 +80,9 @@
     
 - connect database to laravel:  
       ```
-      php artisan key:generate
-      php artisan config:cache
-      php artisan migrate
+      php artisan key:generate  
+      php artisan config:cache  
+      php artisan migrate  
 
       ```
 
