@@ -1,0 +1,37 @@
+sudo apt update
+"sudo apt install nginx" to install nginx
+"sudo apt install php-fpm" to install php
+cd in /var/www/html directory and create a nginx.php file with the content "<?php
+print "<p style='font-weight:bold; color:blue;'>You are accessing nginx server with IP address:</p>".$_SERVER['HTTP_HOST'];
+?>"
+"sudo nano /etc/nginx/sites-available/nginx" to creat a new site
+copy and paste the scrip below into new site file (nginx)
+server {
+    listen 80;
+    server_name your_domain www.your_domain;
+    root /var/www/html;
+
+    index nginx.php index.html index.htm index.php;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+     }
+
+    location ~ /\.ht {
+        deny all;
+    }
+
+}
+
+"sudo ln -s /etc/nginx/sites-available/nginx /etc/nginx/sites-enabled/" to enable the new site
+"sudo unlink /etc/nginx/sites-enabled/default" to disable the default site
+
+Give neccessary permissions
+"sudo chown -R $USER:$USER /var/www/html"
+"sudo chmod -R 755 /var/www/html"
+"sudo systemctl reload nginx" to reload nginx server
