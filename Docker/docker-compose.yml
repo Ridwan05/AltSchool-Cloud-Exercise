@@ -1,0 +1,38 @@
+version: '3.8'
+services:
+  mydb:
+   image: mysql:latest
+   
+   ports:
+     - 3306:3306
+   restart: always
+   environment:
+     - MYSQL_DATABASE=docker
+     - MYSQL_USER=docker
+     - MYSQL_PASSWORD=docker
+     - MYSQL_ROOT_PASSWORD=docker
+
+   volumes:
+     - ./dbdata:/var/lib/mysql
+    
+  laravel:
+   build:
+    context: .
+    dockerfile: Dockerfile_app
+   command: 'php artisan serve --host=0.0.0.0' 
+   volumes:
+     - ./storage:/my_app
+   container_name: laravel
+   ports:
+     - 8000:8000
+
+   depends_on:
+      - mydb
+
+  queue:
+   build:
+    context: .
+    dockerfile: Dockerfile_app
+   command: 'php artisan queue:work'
+   depends_on:
+    - mydb

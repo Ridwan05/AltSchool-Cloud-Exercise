@@ -5,3 +5,6 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
+my_app
+dbdata
+storage
