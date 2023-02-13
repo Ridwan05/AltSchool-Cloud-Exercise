@@ -5,7 +5,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
     --install-dir=/usr/local/bin --filename=composer
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-COPY ./my_app /my_app/
-WORKDIR /my_app
+COPY ./laravel /laravel
+WORKDIR /laravel
 RUN chown -hR www-data .
 RUN composer install
+

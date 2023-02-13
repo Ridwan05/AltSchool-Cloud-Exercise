@@ -18,7 +18,7 @@ services:
   laravel:
    build:
     context: .
-    dockerfile: Dockerfile_app
+    dockerfile: Dockerfile
    command: 'php artisan serve --host=0.0.0.0' 
    volumes:
      - ./storage:/my_app
@@ -32,7 +32,7 @@ services:
   queue:
    build:
     context: .
-    dockerfile: Dockerfile_app
+    dockerfile: Dockerfile
    command: 'php artisan queue:work'
    depends_on:
     - mydb
